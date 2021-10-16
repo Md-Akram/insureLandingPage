@@ -73,15 +73,141 @@ header > .container > .desktop-nav {
   font-size: 25px;
   text-transform: uppercase;
   margin: 10px 0;
-  padding: 10px 100px;
+  padding: 10px 20px;
 }
 
 .btn {
   border: 1px solid var(--VeryLightGray);
 }
+.mobile-intro-section {
+  color: var(--VeryLightGray);
+  background-color: var(--DarkViolet);
+  background-image: url(images/bg-pattern-intro-right-mobile.svg);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 150vh;
+}
 
 .mobile-intro-section > img {
   width: 100%;
+}
+.mobile-intro-section > .container {
+  padding: 100px 0;
+  text-align: center;
+}
+h1 {
+  font-size: 45px;
+
+  font-weight: 400;
+}
+.mobile-intro-section > .container > h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 55px;
+  letter-spacing: 2px;
+}
+.mobile-intro-section > .container > p {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+}
+.mobile-intro-section > .container > button {
+  margin: 20px 0;
+  padding: 10px 30px;
+  color: var(--VeryLightGray);
+  background-color: var(--DarkViolet);
+  font-size: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.description-section {
+  margin: 100px 0;
+}
+.description-section > .container {
+  text-align: center;
+}
+.horizontal-line {
+  height: 1px;
+  width: 150px;
+  margin: 30px auto;
+  background-color: var(--DarkGrayishViolet);
+}
+.desc {
+  margin-bottom: 50px;
+}
+.desc > h2 {
+  font-size: 35px;
+  font-weight: 400;
+}
+.desc > p {
+  color: var(--DarkGrayishViolet);
+}
+
+.how-we-work-section {
+  background-color: var(--DarkViolet);
+  color: var(--VeryLightGray);
+  text-align: center;
+  margin: 150px auto;
+  padding: 60px 0px;
+  background-image: url(images/bg-pattern-how-we-work-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.how-we-work-section > h1 {
+  margin: 0;
+}
+.how-we-work-section > button {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: var(--DarkViolet);
+  color: var(--VeryLightGray);
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--VeryLightGray);
+  padding: 100px 0;
+  background-image: url(images/bg-pattern-footer-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  padding-bottom: 30px;
+}
+footer > .container {
+  text-align: center;
+}
+.footer-top > img {
+  margin: 10px 0;
+}
+.footer-top > .icons {
+  margin: 10px 0 20px 0;
+}
+.icons > a {
+  margin: 0 10px;
+}
+
+.fnav {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fnav > p {
+  margin: 10px 0;
+  color: var(--DarkGrayishViolet);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.fnav > a {
+  text-decoration: none;
+  font-size: 16px;
+  margin: 5px 0;
+  font-weight: 700;
+  color: var(--DarkViolet);
 }
 
 .desktop-intro-section {
