@@ -36,7 +36,10 @@ header > .container {
   /* margin: 20px auto; */
   padding: 20px 0;
 }
-header > .container > .desktop-nav {
+.logo {
+  padding: 10px;
+}
+.desktop-nav {
   display: none;
 }
 #hamburger {
@@ -89,6 +92,7 @@ header > .container > .desktop-nav {
 }
 
 .mobile-intro-section > img {
+  max-height: 100vh;
   width: 100%;
 }
 .mobile-intro-section > .container {
@@ -119,6 +123,10 @@ h1 {
   font-size: 20px;
   cursor: pointer;
   text-transform: uppercase;
+}
+.mobile-intro-section > .container > button:hover {
+  color: var(--DarkViolet);
+  background-color: var(--VeryLightGray);
 }
 
 .description-section {
@@ -165,14 +173,18 @@ h1 {
   color: var(--VeryLightGray);
   cursor: pointer;
 }
+.how-we-work-section > button:hover {
+  background-color: var(--VeryLightGray);
+  color: var(--DarkViolet);
+}
 
 footer {
   background-color: var(--VeryLightGray);
   padding: 100px 0;
-  background-image: url(images/bg-pattern-footer-mobile.svg);
+  background-image: url(images/bg-pattern-footer-desktop.svg);
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
+  background-position: top left;
+
   padding-bottom: 30px;
 }
 footer > .container {
@@ -209,6 +221,9 @@ footer > .container {
   font-weight: 700;
   color: var(--DarkViolet);
 }
+.fnav > a:hover {
+  text-decoration: underline;
+}
 
 .desktop-intro-section {
   display: none;
@@ -220,4 +235,148 @@ footer > .container {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1000px) {
+  #hamburger {
+    display: none;
+  }
+  .desktop-nav {
+    display: block;
+  }
+  .desktop-nav > ul {
+    display: flex;
+  }
+  .desktop-nav > ul > li {
+    list-style-type: none;
+  }
+  .desktop-nav > ul > li > a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--DarkGrayishViolet);
+  }
+  .desktop-nav > ul > li > a:hover {
+    color: var(--VeryDarkViolet);
+  }
+  .desktop-nav > ul > li > .btn {
+    background-color: none;
+    border: 1px solid var(--VeryDarkViolet);
+    transition: all 0.5s;
+  }
+  .desktop-nav > ul > li > .btn:hover {
+    background-color: var(--DarkViolet);
+    color: var(--VeryLightGray);
+  }
+  .mobile-nav {
+    display: none;
+  }
+
+  .mobile-intro-section {
+    display: none;
+  }
+  .desktop-intro-section {
+    display: block;
+    background-color: var(--DarkViolet);
+    padding: 100px 0;
+    background-image: url(images/bg-pattern-intro-left-desktop.svg),
+      url(images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom, right top;
+  }
+  .desktop-intro-section > .container {
+    display: grid;
+    grid-template-columns: 35% 60%;
+    justify-content: space-between;
+    grid-template-areas: 'description img';
+    align-items: flex-start;
+    overflow: hidden;
+  }
+
+  .desktop-intro-section > .container > .description {
+    grid-area: description;
+    color: var(--VeryLightGray);
+  }
+  .desktop-intro-section > .container > .description > p {
+    font-size: 25px;
+  }
+  .desktop-intro-section > .container > .description > button {
+    margin: 20px 0;
+    padding: 10px 30px;
+    color: var(--VeryLightGray);
+    background-color: var(--DarkViolet);
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  .desktop-intro-section > .container > .description > button:hover {
+    background-color: var(--VeryLightGray);
+    color: var(--DarkViolet);
+  }
+
+  .destop-intro-section > .container > .img {
+    grid-area: img;
+  }
+  .destop-intro-section > .container > .img > img {
+    width: 100%;
+  }
+
+  .description-section > .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-rows: 2;
+    grid-template-areas:
+      'desc-top desc-top desc-top'
+      'desc-1 desc-2 desc-3';
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .desc {
+    text-align: left;
+  }
+  .description-top {
+    grid-area: desc-top;
+    justify-self: left;
+  }
+  .description-top > .horizontal-line {
+    margin-left: 0;
+  }
+  .description-1 {
+    grid-area: desc-1;
+  }
+  .description-2 {
+    grid-area: desc-2;
+  }
+  .description-3 {
+    grid-area: desc-3;
+  }
+  .how-we-work-section {
+    background-image: url(images/bg-pattern-how-we-work-desktop.svg);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'h1 h1 btn';
+    padding: 30px;
+  }
+  .how-we-work-section > h1 {
+    grid-area: h1;
+  }
+  .how-we-work-section > button {
+    grid-area: btn;
+    justify-self: end;
+    align-self: center;
+  }
+  .footer-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }
